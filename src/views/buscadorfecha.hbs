@@ -1,0 +1,11 @@
+<form action="/buscarpartido" method="post">
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput" name = "fecha" required
+       >
+  <label for="floatingInput">Fecha Buscada</label>
+</div>
+<div class="card-body p-5 text-center">      
+<button class="btn btn-danger btn-lg btn-block" type="submit" >Enviar</button>        
+</div>
+</form>
+ {{#if mensaje}}<div id="estado" class="p-5 text-center"> <div class="alert alert-danger" role="alert">{{mensaje}}</div></div>{{/if}}

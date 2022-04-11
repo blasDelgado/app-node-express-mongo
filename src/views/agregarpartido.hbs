@@ -1,0 +1,31 @@
+<form action="/agregarpartido" method="post">
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput" name = "fecha" required > 
+  <label for="floatingInput">Fecha</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"name = "rival" required>
+  <label for="floatingInput">Rival</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "goles_a_favor" required>
+  <label for="floatingInput">Goles a favor</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "goles_en_contra" required>
+  <label for="floatingInput">Goles en contra</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "puntos" required>
+  <label for="floatingInput">Puntos</label>
+</div>
+<div class="card-body p-5 text-center">      
+<button class="btn btn-danger btn-lg btn-block" type="submit" >Enviar</button>        
+</div>
+</form>
+ {{#if mensaje}}<div id="estado" class="p-5 text-center"> <div class="alert alert-danger" role="alert">{{mensaje}}</div></div>{{/if}}
+
+
+
+
+ 

@@ -1,0 +1,26 @@
+<form action="/editar/{{resp._id}}" method="post">
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput" name = "fecha" required > 
+  <label for="floatingInput">Fecha: {{resp.fecha}}</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"name = "rival" required>
+  <label for="floatingInput">Rival: {{resp.rival}}</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "goles_a_favor" required placeholder="{{goles_a_favor}}">
+  <label for="floatingInput">Goles a Favor: {{resp.goles_a_favor}}</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "goles_en_contra" required>
+  <label for="floatingInput">Goles en contra: {{resp.goles_en_contra}}</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput"name = "puntos" required>
+  <label for="floatingInput">Puntos: {{resp.puntos}}</label>
+</div>
+<div class="card-body p-5 text-center">      
+<button class="btn btn-danger btn-lg btn-block" type="submit" >Editar</button>        
+</div>
+</form>
+{{#if mensaje}}<div id="estado" class="p-5 text-center"> <div class="alert alert-danger" role="alert">{{mensaje}}</div></div>{{/if}}

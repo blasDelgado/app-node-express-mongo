@@ -1,0 +1,34 @@
+
+<style>
+  a{
+  text-decoration:none;
+  color:whitesmoke;
+  }
+</style>
+<table class="table table-dark table-hover">
+  <tr>
+    <th>Fecha</th>
+    <th>Rival</th>
+    <th>Goles a favor</th>
+    <th>Goles en contra</th>
+    <th>Puntos</th>
+    <th>Acciones</th>
+  </tr>
+  
+    {{#each respuesta}}
+    <tr>
+    <td>{{fecha}}</td>
+    <td>{{rival}}</td>
+    <td>{{goles_a_favor}}</td>
+    <td>{{goles_en_contra}}</td>
+    <td>{{puntos}}</td>
+    <td>
+      <button type="button" class="btn btn-primary"><a href="/editar/{{_id}}">Editar</a></button>
+      <button type="button" class="btn btn-danger" ><a href="/eliminar/{{fecha}}">Borrar</a></button>
+    </td>
+
+    </tr> 
+    {{/each}}  
+    
+  
+</table>
