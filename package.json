@@ -2,10 +2,10 @@
   "name": "boca-partidos",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  
   "main": "index.js",
   "scripts": {
-    "start":"node src/index.js",
+    "start":"node src/index.js --exec babel-node",
     "dev": "nodemon src/index.js --exec babel-node"
   },
   "author": "blas",
