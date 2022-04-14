@@ -24,6 +24,7 @@ const router = Router();
 import { verifyToken } from "../middleweare/verify-token.js";
 const token = verifyToken;
 
+router.get("/", todos);
 //Pagina principal.
 router.get("/todoslospartidos", token, todos);
 
