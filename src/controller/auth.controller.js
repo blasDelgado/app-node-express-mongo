@@ -1,8 +1,9 @@
-import User from "../models/user";
+import User from "../models/user.js";
 import jwt from "jsonwebtoken";
-import config from "../config";
+import config from "../config.js";
 import eflash from "connect-flash";
-import { clearCookie } from "express/lib/response";
+import pkg from 'express/lib/response.js';
+const { clearCookie } = pkg;
 
 export const signup = async (req, res) => {
     try {

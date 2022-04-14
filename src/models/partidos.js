@@ -1,4 +1,6 @@
-import { Schema, model } from "mongoose";
+import pkg from 'mongoose';
+const { Schema } = pkg;
+const { model } = pkg;
 
 const partidosSchema = new Schema({
     fecha: {

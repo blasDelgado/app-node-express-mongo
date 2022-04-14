@@ -1,8 +1,6 @@
-import express from "express"
-import partidos from "../models/partidos"
 import { Router } from "express";
-import { signup, signin, signinV, signout, signupV } from "../controller/auth.controller";
-import { haveToken } from "../middleweare/have-token";
+import { signup, signin, signinV, signout, signupV } from "../controller/auth.controller.js";
+import { haveToken } from "../middleweare/have-token.js";
 const router = Router();
 const token = haveToken;
 

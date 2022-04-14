@@ -1,6 +1,5 @@
-import { find } from "../models/partidos";
-import partidosSchema from "../models/partidos";
-import res from "express/lib/response";
+import partidosSchema from "../models/partidos.js";
+import res from "express/lib/response.js";
 
 
 const partidos = partidosSchema;
@@ -252,7 +251,6 @@ export const editando = async (req, res) => {
     let _id = req.params._id;
     let { fecha, rival, goles_a_favor, goles_en_contra, puntos } = req.body;
 
-    console.log(_id)
     try {
         await partidos.findOneAndUpdate({ _id: _id }, { fecha: fecha, rival: rival, goles_a_favor: goles_a_favor, goles_en_contra: goles_en_contra, puntos: puntos })
 

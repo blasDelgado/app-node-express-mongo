@@ -1,5 +1,4 @@
-import express from "express"
-import partidos from "../models/partidos"
+
 import {
     todos,
     masgoleador,
@@ -19,10 +18,10 @@ import {
     eliminar,
     editar,
     editando
-} from "../controller/calls-controller";
+} from "../controller/calls-controller.js";
 import { Router } from "express";
 const router = Router();
-import { verifyToken } from "../middleweare/verify-token";
+import { verifyToken } from "../middleweare/verify-token.js";
 const token = verifyToken;
 
 //Pagina principal.

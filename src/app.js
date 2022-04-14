@@ -1,16 +1,19 @@
 import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
-import callRoutes from "./routes/calls-routes";
-import authRoutes from "./routes/auth.routhes";
+import callRoutes from "./routes/calls-routes.js";
+import authRoutes from "./routes/auth.routhes.js";
 import path from "path";
 import { engine } from 'express-handlebars';
 import flash from "connect-flash";
 import session from "express-session";
+import { fileURLToPath } from 'url';
 import cookieParser from "cookie-parser";
+
+
 const app = express();
 
-//config
+//Configuraciones
 dotenv.config();
 
 //Middlewares
@@ -25,7 +28,12 @@ app.use(session({
 app.use(flash());
 app.use(cookieParser());
 
-//views
+//Routa de Vistas
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+//Motor de vistas
+console.log('directory-name', __dirname);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', engine({
     layoutsDir: path.join(app.get('views'), 'layouts'),
@@ -34,13 +42,13 @@ app.engine('.hbs', engine({
 }));
 app.set('view engine', '.hbs');
 
-//Global var
+//Variables globales
 app.use((req, res, next) => {
     res.locals.mensaje = req.flash("mensaje");
     next();
 });
 
-//Routes
+//Rutas
 app.use(callRoutes)
 app.use(authRoutes)
 export default app;

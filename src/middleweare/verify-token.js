@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
-import config from "../config";
-import User from "../models/user";
+import config from "../config.js";
+import User from "../models/user.js";
 
 
 export async function verifyToken(req, res, next) {

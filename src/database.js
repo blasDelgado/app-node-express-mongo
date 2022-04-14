@@ -1,11 +1,17 @@
 import mongoose from "mongoose"
-import config from "./config";
+import config from "./config.js";
 
-mongoose.connect(
+let db;
 
-   `mongodb+srv://${config.user}:${config.password}@cluster0.6gbsk.mongodb.net/boca2021?retryWrites=true&w=majority`
-)
-   .then((db) => console.log('DB is connected'))
-   .catch((e) => console.error(e));
+try {
 
+   db = mongoose.connect(`mongodb+srv://${config.user}:${config.password}@cluster0.6gbsk.mongodb.net/boca2021?retryWrites=true&w=majority`);
+   console.log("Connected to MongoDB");
 
+} catch (error) {
+
+   console.log(error);
+
+};
+
+export default db;
