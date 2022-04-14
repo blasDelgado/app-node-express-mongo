@@ -20,7 +20,6 @@
     "express-session": "^1.17.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.1",
-    "dotenv": "^14.3.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
@@ -29,7 +28,6 @@
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "dotenv": "^14.3.2",
-    "handlebars": "^4.5.0",
     "nodemon": "^2.0.15"
   }
 }
